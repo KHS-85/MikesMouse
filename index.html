@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mikes Mouse</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* Default background color */
+            text-align: center;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #mouse-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #color-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db; /* Default button color */
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Media query for mobile responsiveness */
+        @media (max-width: 768px) {
+            #color-button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Mikes Mouse</h1>
+        <img id="mouse-image" src="./Mouse2.png" alt="Mikes Mouse">
+        <button id="color-button" onclick="changeBackgroundColor()">Change Background Color</button>
+    </div>
+
+    <script>
+        function changeBackgroundColor() {
+            // Generate a random color (hex code)
+            const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>
